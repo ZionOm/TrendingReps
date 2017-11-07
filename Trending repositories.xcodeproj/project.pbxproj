@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF4541001FAF76A3007C4D1B /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF4540FF1FAF76A3007C4D1B /* background.jpg */; };
+		CF462C1F1FB0E3230079D138 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF462C1E1FB0E3220079D138 /* Alamofire.framework */; };
+		CF462C211FB0E3EB0079D138 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF462C1E1FB0E3220079D138 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF4A172F1FACC75A00761B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A172E1FACC75A00761B49 /* AppDelegate.swift */; };
 		CF4A17311FACC75A00761B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A17301FACC75A00761B49 /* ViewController.swift */; };
 		CF4A17341FACC75A00761B49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4A17321FACC75A00761B49 /* Main.storyboard */; };
@@ -33,7 +36,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CF462C221FB0E3EB0079D138 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CF462C211FB0E3EB0079D138 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CF4540FF1FAF76A3007C4D1B /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		CF462C1E1FB0E3220079D138 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		CF4A172B1FACC75A00761B49 /* Trending repositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trending repositories.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4A172E1FACC75A00761B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4A17301FACC75A00761B49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF462C1F1FB0E3230079D138 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +97,7 @@
 		CF4A17221FACC75A00761B49 = {
 			isa = PBXGroup;
 			children = (
+				CF462C1E1FB0E3220079D138 /* Alamofire.framework */,
 				CF4A172D1FACC75A00761B49 /* Trending repositories */,
 				CF4A17421FACC75B00761B49 /* Trending repositoriesTests */,
 				CF4A174D1FACC75B00761B49 /* Trending repositoriesUITests */,
@@ -100,6 +121,7 @@
 				CF4A172E1FACC75A00761B49 /* AppDelegate.swift */,
 				CF4A17301FACC75A00761B49 /* ViewController.swift */,
 				CF4A17321FACC75A00761B49 /* Main.storyboard */,
+				CF4540FF1FAF76A3007C4D1B /* background.jpg */,
 				CF4A17351FACC75A00761B49 /* Assets.xcassets */,
 				CF4A17371FACC75A00761B49 /* LaunchScreen.storyboard */,
 				CF4A173A1FACC75A00761B49 /* Info.plist */,
@@ -135,6 +157,7 @@
 				CF4A17271FACC75A00761B49 /* Sources */,
 				CF4A17281FACC75A00761B49 /* Frameworks */,
 				CF4A17291FACC75A00761B49 /* Resources */,
+				CF462C221FB0E3EB0079D138 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF4A17391FACC75A00761B49 /* LaunchScreen.storyboard in Resources */,
+				CF4541001FAF76A3007C4D1B /* background.jpg in Resources */,
 				CF4A17361FACC75A00761B49 /* Assets.xcassets in Resources */,
 				CF4A17341FACC75A00761B49 /* Main.storyboard in Resources */,
 			);
@@ -426,6 +450,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Trending repositories/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "m.Trending-repositories";
@@ -440,6 +468,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Trending repositories/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "m.Trending-repositories";
